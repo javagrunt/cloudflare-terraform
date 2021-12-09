@@ -19,5 +19,5 @@ resource "cloudflare_record" "teespring" {
   name    = "teespring"
   value   = "sites.teespring.com"
   type    = "CNAME"
-  proxied = true
+  proxied = false
 }
