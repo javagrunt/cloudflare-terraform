@@ -4,9 +4,11 @@ terraform {
       source = "cloudflare/cloudflare"
     }
   }
-}
+  cloud {
+    organization = "javagrunt"
 
-provider "cloudflare" {
-  email     = var.cloudflare_email
-  api_token = var.cloudflare_api_token
+    workspaces {
+      name = "cloudflare"
+    }
+  }
 }
