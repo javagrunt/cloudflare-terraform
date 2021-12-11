@@ -22,6 +22,22 @@ resource "cloudflare_record" "teespring" {
   proxied = false
 }
 
+resource "cloudflare_record" "store" {
+  zone_id = var.cloudflare_zone_id
+  name    = "store"
+  value   = "sites.teespring.com"
+  type    = "CNAME"
+  proxied = false
+}
+
+resource "cloudflare_record" "shop" {
+  zone_id = var.cloudflare_zone_id
+  name    = "shop"
+  value   = "sites.teespring.com"
+  type    = "CNAME"
+  proxied = false
+}
+
 resource "cloudflare_record" "aspmx" {
   zone_id  = var.cloudflare_zone_id
   name     = "@"
